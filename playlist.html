@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>🎵 Playlist Café - Style Spotify</title>
+  <link rel="stylesheet" href="playlist.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🎵 Playlist Style</h1>
+    </header>
+
+    <div class="alert" id="alert-box"></div>
+
+    <div id="audio-player-container">
+      <audio id="main-audio-player" controls></audio>
+      <div id="now-playing"></div>
+    </div>
+
+    <form id="song-form" autocomplete="off">
+      <input type="text" id="song-title" placeholder="Titre de la chanson" required />
+      <input type="text" id="song-artist" placeholder="Artiste" required />
+      <select id="song-mood" required>
+        <option value="" disabled selected>Ambiance</option>
+        <option value="Chill">Chill</option>
+        <option value="Happy">Happy</option>
+        <option value="Energetic">Énergétique</option>
+        <option value="Calm">Calme</option>
+      </select>
+      <input type="time" id="song-time" required />
+      <input type="url" id="song-url" placeholder="URL du fichier audio (mp3)" required />
+      <button type="submit">➕ Ajouter</button>
+    </form>
+
+    <section>
+      <h2>🎧 Playlist planifiée</h2>
+      <ul id="playlist"></ul>
+    </section>
+  </div>
+
+  <script src="playlist.js"></script>
+</body>
+</html>
